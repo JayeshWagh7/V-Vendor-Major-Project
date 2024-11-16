@@ -1,0 +1,120 @@
+body {
+    background-color: #C9C5BA; /* Background color updated */
+    color: rgba(14, 13, 13, 0.849);
+  }
+  
+  div {
+    text-align: center; /* Center all child elements horizontally */
+    margin-top: 50px; /* Add margin-top to give space from the top */
+  }
+  
+  .b1, .b2 {
+    color: rgba(0, 0, 0, 0.863);
+    font-size: 20px;
+    width: 300px;
+    height: 200px;
+    background-color: #EBBAB9; /* Button color updated */
+    border-radius: 50px;
+    border: none;
+    padding-top: 120px;
+    font-weight: bold;
+    display: inline-block; /* Allow buttons to sit side by side */
+    margin: 20px; /* Add spacing between buttons */
+  }
+  
+  .b1 {
+    background-image: url('add.png');
+    background-size: 90px;
+    background-repeat: no-repeat;
+    background-position: 105px;
+  }
+  
+  .b2 {
+    background-image: url('subration.png');
+    background-repeat: no-repeat;
+    background-size: 150px;
+    background-position: 75px;
+  }
+  
+  .b1:hover, .b2:hover {
+    background-color: #97B1A6; /* Button hover color updated */
+  }
+  
+  .b1:active, .b2:active {
+    background-color: #C9C5BA;
+  }
+  
+  .h1 {
+    margin-left: 30px;
+    margin-top: 70px;
+  }
+  
+  nav {
+    background-color: #97B1A6; /* Navigation bar color updated */
+    color: rgba(0, 0, 0, 0.856);
+    margin-top:-20px ;
+  }
+  
+  nav li:first-child {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    font-style: oblique;
+  }
+  
+  nav ul {
+    width: 90%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav li {
+    height: 40px;
+  }
+  
+  nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgba(39, 38, 38, 0.89);
+  }
+  
+  nav li:hover {
+    background-color: rgba(236, 239, 241, 0.527);
+  }
+  
+  nav li:active {
+    background-color:#EBBAB9;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    color: rgba(0, 0, 0, 0.815);
+    background-color: #97B1A6;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0px 10px #80968c;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .sidebar li {
+    width: 100%;
+  }
+  
+  .sidebar a {
+    width: 100%;
+  }
+  

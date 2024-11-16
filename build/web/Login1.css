@@ -1,0 +1,81 @@
+body {
+    background-color: #4D6873;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h2{
+    color: white;
+}
+form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    width: 90%; /* Full width up to 400px */
+    max-width: 400px; /* Maximum width */
+}
+
+label {
+    margin-bottom: 5px;
+    color: rgb(233, 223, 223);
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="password"] {
+    padding: 10px;
+    width: auto;
+    background-color:#C7CCD9;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+}
+input:hover{
+    background-color:#F2F2F2;
+}
+button {
+    background-color: #C7CCD9;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 80px;
+    border-radius: 20px;
+    padding: 10px;
+    color: rgb(31, 30, 30);
+    cursor: pointer;
+    font-style: normal;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #F2F2F2;
+    color:black;
+}
+
+.b1, .b2, .b3 {
+    width: 50%;
+}
+
+.b1, .b2, .b3 {
+    padding: 10px; /* Added padding for uniformity */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px; /* Spacing above the link */
+    text-align: center; /* Center the link */
+}
+
+@media (min-width: 600px) {
+    form {
+        width: 400px; /* Maintain max width on larger screens */
+    }
+}
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Login1.css">
+</head>
+<body>
+    <form action="Login.jsp" method="post">
+        <h2>Welcome to Login</h2>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="u1" required>
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="p1" required>
+        
+        <a href="forget.html">Forget Password?</a>
+        
+        <button class="b1" type="button" id="back">Back</button>
+        <button class="b2" type="submit">Login</button>
+        <button class="b3" type="button" id="regis">Registration</button>
+    </form>
+
+    <script>
+        document.getElementById('back').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+        document.getElementById('regis').addEventListener('click', function() {
+            window.location.href = 'SignUp.html';
+        });
+    </script>
+</body>
+</html>

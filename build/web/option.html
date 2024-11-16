@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option</title>
+    <link rel="stylesheet" href="option2.css">
+</head>
+<body>
+    <div>
+        <nav>
+            <ul>
+                <li class="logo">V-vendor</li>
+                <li class="menu-button" onclick="showsidebar()">
+                    <a href="#"> <img src="threeline.png" class="img1" id="threeline" width="33px"></a>
+                </li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick="hidesidebar()">
+                    <a href="#"><img src="close11.png" width="40px" height="40px"></a>
+                </li>
+                <li id="h"><a href="#">Home</a></li>
+                <li id="l"><a href="#">Login</a></li>
+                <li id="r"><a href="#">Registration</a></li>
+                <li id="update"><a href="#">Update</a></li>
+                <li id="lo"><a href="#">Log out</a></li>
+                <li id="help"><a href="#">Help</a></li>
+                <li><a href="#">Back</a></li>
+            </ul>
+        </nav>
+        <div>
+            <h1 class="h1">Welcome To V-Vendor</h1>
+            <button class="b1" id="b" onclick="actionbar()">BUY (खरीदना)</button>
+            <button class="b2" id="s">SELL (बेचना)</button>
+        </div>
+    </div>
+
+    <!-- Move script to the end of body -->
+    <script src="option.js"></script>
+</body>
+</html>

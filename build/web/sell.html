@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sell html</title>
+    <link rel="stylesheet" href="sell2.css">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar" style="display: none;">
+            <li onclick="hidesidebar()"><a href="#"><img src="close11.png" width="40px" height="40px" alt="Close"></a></li>
+            <li id="home"><a href="#">Home</a></li>
+            <li id="login"><a href="#">Login</a></li>
+            <li id="registration"><a href="#">Registration</a></li>
+            <li id="option"><a href="#">Option</a></li>
+            <li><a href="#">Help</a></li>
+            <li id="back"><a href="#">Back</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">V-vendor</a></li>
+            <li class="menu-button" onclick="showsidebar()"><a href="#"><img src="threeline.png" class="img1" id="threeline" alt="Menu"></a></li>
+        </ul>
+    </nav>
+
+    <h1>Select Vegetables and Fruits</h1>
+    <form action="createtable.jsp" method="post">
+        <fieldset>
+            <legend>Choose vegetables:</legend>
+            <label>
+                <input type="checkbox" name="vegetables" value="Carrot"> गाजर (Carrot)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="Broccoli"> ब्रोकोली (Broccoli)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="Spinach"> पालक (Spinach)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="BellPepper"> शिमला मिर्च (Bell Pepper)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="Tomato"> टमाटर (Tomato)
+            </label><br>
+            <!-- Adding two more vegetables -->
+            <label>
+                <input type="checkbox" name="vegetables" value="Cauliflower"> फूलगोभी (Cauliflower)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="Cucumber"> खीरा (Cucumber)
+            </label><br>
+
+            <legend>Choose fruits:</legend>
+            <label>
+                <input type="checkbox" name="vegetables" value="Apple"> सेब (Apple)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="Banana"> केला (Banana)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="Orange"> संतरा (Orange)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="Mango"> आम (Mango)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="Pineapple"> अनानास (Pineapple)
+            </label><br>
+            <!-- Adding 5 more fruits -->
+            <label>
+                <input type="checkbox" name="vegetables" value="Peach"> आड़ू (Peach)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="Grapes"> अंगूर (Grapes)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="Blueberry"> ब्लूबेरी (Blueberry)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="Strawberry"> स्ट्रॉबेरी (Strawberry)
+            </label><br>
+            <label>
+                <input type="checkbox" name="vegetables" value="Kiwi"> कीवी (Kiwi)
+            </label><br>
+
+            <input id="bi" type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <script>
+        function showsidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hidesidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+        document.getElementById('registration').addEventListener('click', function() {
+            window.location.href = 'SignUp.html';
+        });
+        document.getElementById('home').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+        document.getElementById('login').addEventListener('click', function() {
+            window.location.href = 'Login.html';
+        });
+        document.getElementById('option').addEventListener('click', function() {
+            window.location.href = 'option.html';
+        });
+    </script>
+</body>
+</html>

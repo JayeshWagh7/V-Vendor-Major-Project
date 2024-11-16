@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index page servlet</title>
+    <link rel="stylesheet" href="Home1.css">
+<style>
+.slogan {
+    margin-top: 100px; /* Adds space from the top of the page */
+    text-align: center; /* Centers the text horizontally */
+    font-size: 1.5em; /* Adjust the font size as needed */
+    font-family: Arial, sans-serif; /* Uses a clean, readable font */
+    color: white; /* Text color is white, change if needed */
+    line-height: 1.5; /* Adjust line height for better readability */
+    margin-left: auto; /* Centers the text horizontally */
+    margin-right: auto; /* Ensures the text is centered in the container */
+    max-width: 800px; /* Limits the width of the text */
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hidesidebar()"><a href="#"><img src="close11.png" width="40px" height="40px"></a></li>
+            
+            <li id="login"><a href="#">Login</a></li>
+            <li id="signup"><a href="#">Registration</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Back</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">V-vendor</a></li>
+            
+            <li id="login1" class="hideonMobile"><a href="#">Login</a></li>
+            <li id="signup1" class="hideonMobile"><a href="#">Registration</a></li>
+            <li class="hideonMobile"><a href="#">About</a></li>
+            <li class="hideonMobile"><a href="#">Help</a></li>
+            <li class="hideonMobile"><a href="#">Back</a></li>
+            <li class="menu-botton" onclick="showsidebar()"><a href="#"> <img src="threeline.png" class="img1" id="threeline" width="35px" height="40px"></a></li>
+        </ul>
+    </nav>
+  <p class="slogan">"V-Vendor: The Marketplace for Fresh Produce.<br>Whether you're buying or selling, enjoy farm-fresh quality at your fingertips."</p>
+
+     <script>
+        function showsidebar(){
+            const sidebar=document.querySelector('.sidebar');
+            sidebar.style.display='flex';
+        }
+        function hidesidebar(){
+            const sidebar=document.querySelector('.sidebar');
+            sidebar.style.display='none';
+        }
+        document.getElementById("login").addEventListener("click",function(){
+            window.location.href="Login.html";
+        });
+        document.getElementById("login1").addEventListener("click",function(){
+            window.location.href="Login.html";
+        });
+        document.getElementById("signup").addEventListener("click",function(){
+            window.location.href="SignUp.html";
+        });
+        document.getElementById("signup1").addEventListener("click",function(){
+            window.location.href="SignUp.html";
+        });
+        document.getElementById("about").addEventListener("click",function(){
+            window.location.href="about.html";
+        });
+        document.getElementById("help").addEventListener("click",function(){
+            window.location.href="Help.html";
+        });
+    </script>
+</body>
+</html>

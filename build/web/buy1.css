@@ -1,0 +1,125 @@
+body {
+    text-align: center;
+    background-color: #c9c5ba;
+
+nav {
+    background-color: #97b1a6;
+}
+
+nav ul {
+    width: 90%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav li:hover {
+    background-color: rgb(216, 212, 212);
+}
+
+nav li:active {
+    background-color: rgb(245, 117, 117);
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 450lvh; /* Adjust this if necessary */
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.664);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0px 10px rgb(133, 62, 62);
+    display: none; /* Initially hide the sidebar */
+    flex-direction: column; /* Sidebar items arranged in a column */
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.img1 {
+    width: 35px;
+    height: 30px;
+}
+
+
+@media (max-width: 800px) {
+    .hideonMobile {
+        display: none;
+    }
+    .menu-botton {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+.div1 {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between buttons */
+}
+
+button {
+    flex: 1 1 calc(20% - 10px); /* Adjust width to fit 5 buttons in a row */
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex; /* To use flexbox for alignment */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text below the image */
+    border-radius: 15px;
+    background-color: #ebbab9;
+    font-weight: bold;
+    border: none;
+}
+
+button:hover {
+    background-color: rgba(228, 121, 121, 0.767);
+}
+
+button:active {
+    background-color:#97B1A6;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px; /* Space between image and text */
+}

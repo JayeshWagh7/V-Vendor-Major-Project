@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index NetBean</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hidesidebar()"><a href="#"><img src="close11.png" width="40px" height="40px"></a></li>
+            <li id="login"><a href="#">Login</a></li>
+            <li id="signup"><a href="#">Registration</a></li>
+            <li id="about"><a href="#">About</a></li>
+            <li id="help"><a href="#">Help</a></li>
+            <li><a href="#">Back</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">V-vendor</a></li>
+            <li id="login1" class="hideonMobile"><a href="#">Login</a></li>
+            <li id="signup1" class="hideonMobile"><a href="#">Registration</a></li>
+            <li class="hideonMobile" id="about1"><a href="#">About</a></li>
+            <li class="hideonMobile" id="help1"><a href="#">Help</a></li>
+            <li class="hideonMobile"><a href="#">Back</a></li>
+            <li class="menu-button" onclick="showsidebar()"><a href="#"><img src="threeline.png" width="35px" height="40px" id="threeline"></a></li>
+        </ul>
+    </nav>
+    <script>
+        function showsidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hidesidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+
+        // Add event listeners for login and signup links
+        ['login', 'login1', 'signup', 'signup1', 'about', 'help'].forEach(id => {
+            document.getElementById(id).addEventListener('click', function() {
+                const pageMap = {
+                    login: "Login.html",
+                    login1: "Login.html",
+                    signup: "SignUp.html",
+                    signup1: "SignUp.html",
+                    about: "about.html",
+                    help: "Help.html"
+                };
+                window.location.href = pageMap[id];
+            });
+        });
+    </script>
+</body>
+</html>

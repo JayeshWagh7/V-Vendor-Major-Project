@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy html</title>
+    <link rel="stylesheet" href="buy1.css">
+</head>
+
+<body>
+    <form action="buy.jsp">
+    <nav>
+        <ul class="sidebar">
+            <li onclick="hidesidebar()"><a href="#"><img src="close11.png" width="40px" height="40px"></a></li>
+            <li id="home"><a href="#">Home</a></li>
+            <li id="login"><a href="#">Login</a></li>
+            <li id="option"><a href="#">option</a></li>
+            <li id="logout"><a href="#">Log out</a></li>
+            <li id="back"><a href="#">Back</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">V-vendor</a></li>
+            <li class="menu-botton" onclick="showsidebar()"><a href="#"><img src="threeline.png" class="img1" id="threeline"></a></li>
+        </ul>
+    </nav>
+    
+    <h1>All are available on our website</h1>
+    <h1>"हमारी वेबसाइट पर सभी उपलब्ध हैं।"</h1>
+    <div class="div1">
+        <h1>List of Vegetables</h1>
+        <div class="button-container">
+            <!-- Vegetable Buttons -->
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="carrot"><img src="add.png" alt="Add Icon">Carrot (गाजर)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="broccoli"><img src="add.png" alt="Add Icon">Broccoli (ब्रोकली)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="tomato"><img src="add.png" alt="Add Icon">Tomato (टमाटर)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="spinach"><img src="add.png" alt="Add Icon">Spinach (पालक)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="bellpepper"><img src="add.png" alt="Add Icon">Bell Pepper (शिमला मिर्च)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="cauliflower"><img src="add.png" alt="Add Icon">Cauliflower (फूलगोभी)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="cucumber"><img src="add.png" alt="Add Icon">Cucumber (खीरा)</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="div2">
+        <h1>List of Fruits</h1>
+        <div class="button-container">
+            <!-- Fruit Buttons -->
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="apple"><img src="add.png" alt="Add Icon">Apple (सेब)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="banana"><img src="add.png" alt="Add Icon">Banana (केला)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="orange"><img src="add.png" alt="Add Icon">Orange (संतरा)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="mango"><img src="add.png" alt="Add Icon">Mango (आम)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="pineapple"><img src="add.png" alt="Add Icon">Pineapple (अनानास)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="peach"><img src="add.png" alt="Add Icon">Peach (आड़ू)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="grapes"><img src="add.png" alt="Add Icon">Grapes (अंगूर)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="blueberry"><img src="add.png" alt="Add Icon">Blueberry (ब्लूबेरी)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="strawberry"><img src="add.png" alt="Add Icon">Strawberry (स्ट्रॉबेरी)</button>
+            </form>
+            <form method="post" action="buy.jsp">
+                <button type="submit" name="vegetable" value="kiwi"><img src="add.png" alt="Add Icon">Kiwi (कीवी)</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showsidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hidesidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+
+        document.getElementById('option').addEventListener('click',function(){
+            window.location='option.html';
+        });
+        document.getElementById('home').addEventListener('click',function(){
+            window.location='index.html';
+        });
+        document.getElementById('login').addEventListener('click',function(){
+            window.location='Login.html';
+        });
+        document.getElementById('logout').addEventListener('click',function(){
+            window.location='SignUp.html';
+        });
+        document.getElementById('back').addEventListener('click',function(){
+            window.location='option.html';
+        });
+    </script>
+    </form>
+</body>
+</html>

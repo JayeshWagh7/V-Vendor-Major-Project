@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <script >
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('back').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevents the default form submission
+                window.location.href = 'index.html'; // Navigates to Home.html
+            });
+        });
+
+
+    function data()
+    {
+        let a=document.getElementById('a').value;
+        let b=document.getElementById('b').value;
+        let c=document.getElementById('c').value;
+        let d=document.getElementById('d').value;
+        let p=document.getElementById('p').value;
+        let f=document.getElementById('f').value;
+
+        const minlength=8;
+        const maxlength=20;
+        const lowerCase=/[a-z]/.test(p);
+        const uperCase=/[A-Z]/.test(p);
+        const digit=/\d/.test(p);
+
+        
+        const gmailpattern=/^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+        if(a==""||b==""||c==""||d==""||p==""||f=="")
+    {
+        alert("All field is mandatory to feel");
+        return false;
+    }
+        if(!gmailpattern.test(c)) {
+                alert("Please enter a valid Gmail address.");
+                return false; // Prevent form submission
+            }
+       
+        else if(d.length<10|| d.length>10)
+    {
+        alert("Number should be 10 digit only");
+        return false;
+    }
+        else if(isNaN(d))
+    {
+        alert("Please Enter only numner... Which enter valid 10 digit number! ");
+        return false;
+    }
+    else if(p!=f){
+            alert("Please Enter correct Password");
+            return false;
+        }
+    else {true;}
+
+if(p.length<minlength|| p.length>maxlength)
+    {
+        alert(`Password must be between ${minLength} and ${maxLength} characters.`);
+        return false;
+    }
+ if(!lowerCase||!uperCase ||!digit){
+    alert("Password must include at least one uppercase letter, one lowercase letter, and one digit.");
+    return false;
+ }
+}
+    </script>
+    <form onsubmit="return data()" action="SignUp.jsp">
+    <p>Welcome to V vendor</p>
+    
+    <label>Username</label><br>
+    <input type="text" id="a" name="u1"><br>
+    
+    <label>City Name</label><br>
+    <input type="text" id="b" name="l1"><br>
+    
+    <label>Gmail</label><br>
+    <input type="email" id="c" name="g1"><br>
+    
+    <label>Mobile</label><br>
+    <input type="text" id="d" name="m1"><br>
+    
+    <label>Create Password</label><br>
+    <input type="password" id="p" name="p1"><br>
+    
+    <label>Confirm Password</label><br>
+    <input type="password" id="f"><br>
+    
+    <button id="back">Back</button>
+    <button>Registration</button>
+    
+    
+    
+    
+    </form>
+</body>
+</html>

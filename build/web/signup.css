@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #4D6873; /* New background color */
+}
+
+label {
+    color: #F2F2F2;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #F2F2F2; /* Input field remains the same */
+    padding: 5px;
+    border-radius: 7px;
+}
+
+
+
+button {
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background-color:#F2F2F2; /* Button base color */
+    border: none;
+    height: 28px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #0D0D0D; /* Button hover background updated */
+    color: #F2F2F2; /* Text color changes on hover */
+    border: none;
+}
+
+button:active {
+    background-color: #404040; /* Active button state color */
+}
+
+h2 {
+    color: white; /* Updated heading color */
+}

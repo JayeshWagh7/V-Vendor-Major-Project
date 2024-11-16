@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password</title>
+    <style>
+        /* Optional: Add some basic styling */
+        .form-container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="button"] {
+            background-color: #6c757d;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form onsubmit="return data()" action="forget.jsp">
+            <label for="username">Username</label>
+            <input type="text" id="a" name="u1" required>
+            
+            <label for="password">Change Password</label>
+            <input type="password" id="p" name="p1" required>
+            
+            <button type="button" id="back" onclick="window.location.href='Login.html'">Back</button>
+            <button type="submit" id="done">Done</button>
+        </form>
+    </div>
+
+    <script>
+        function data() {
+            let a = document.getElementById('a').value;
+            let p = document.getElementById('p').value;
+
+            const minlength = 8;
+            const maxlength = 20;
+            const lowerCase = /[a-z]/.test(p);
+            const upperCase = /[A-Z]/.test(p);
+            const digit = /\d/.test(p);
+
+            // Email pattern validation (if applicable)
+            const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+            
+            // Basic field validation
+            if (a === "" || p === "") {
+                alert("All fields are mandatory.");
+                return false;
+            }
+
+            // Password length validation
+            if (p.length < minlength || p.length > maxlength) {
+                alert(`Password must be between ${minlength} and ${maxlength} characters.`);
+                return false;
+            }
+
+            // Password complexity validation
+            if (!lowerCase || !upperCase || !digit) {
+                alert("Password must include at least one uppercase letter, one lowercase letter, and one digit.");
+                return false;
+            }
+
+            // If all validations pass
+            return true;
+        }
+    </script>
+</body>
+</html>
